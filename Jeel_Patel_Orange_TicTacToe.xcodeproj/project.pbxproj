@@ -13,6 +13,8 @@
 		E5743204233BFAFD00FDA844 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5743202233BFAFD00FDA844 /* Main.storyboard */; };
 		E5743206233BFAFE00FDA844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5743205233BFAFE00FDA844 /* Assets.xcassets */; };
 		E5743209233BFAFE00FDA844 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5743207233BFAFE00FDA844 /* LaunchScreen.storyboard */; };
+		E5743211233C075700FDA844 /* Jeel_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5743210233C075700FDA844 /* Jeel_TableViewController.swift */; };
+		E5743213233C092500FDA844 /* Jeel_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5743212233C092500FDA844 /* Jeel_TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		E5743205233BFAFE00FDA844 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5743208233BFAFE00FDA844 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E574320A233BFAFE00FDA844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5743210233C075700FDA844 /* Jeel_TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jeel_TableViewController.swift; sourceTree = "<group>"; };
+		E5743212233C092500FDA844 /* Jeel_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jeel_TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,13 @@
 			children = (
 				E57431FC233BFAFD00FDA844 /* AppDelegate.swift */,
 				E57431FE233BFAFD00FDA844 /* SceneDelegate.swift */,
-				E5743200233BFAFD00FDA844 /* ViewController.swift */,
 				E5743202233BFAFD00FDA844 /* Main.storyboard */,
+				E5743200233BFAFD00FDA844 /* ViewController.swift */,
 				E5743205233BFAFE00FDA844 /* Assets.xcassets */,
 				E5743207233BFAFE00FDA844 /* LaunchScreen.storyboard */,
 				E574320A233BFAFE00FDA844 /* Info.plist */,
+				E5743210233C075700FDA844 /* Jeel_TableViewController.swift */,
+				E5743212233C092500FDA844 /* Jeel_TableViewCell.swift */,
 			);
 			path = Jeel_Patel_Orange_TicTacToe;
 			sourceTree = "<group>";
@@ -141,6 +147,8 @@
 				E5743201233BFAFD00FDA844 /* ViewController.swift in Sources */,
 				E57431FD233BFAFD00FDA844 /* AppDelegate.swift in Sources */,
 				E57431FF233BFAFD00FDA844 /* SceneDelegate.swift in Sources */,
+				E5743211233C075700FDA844 /* Jeel_TableViewController.swift in Sources */,
+				E5743213233C092500FDA844 /* Jeel_TableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
