@@ -10,9 +10,9 @@ import Foundation
 
 class Jeel_GameModel {
     var whoseTurn = "X"
-    
+    var lastPlayed = ""
     var numberOfMoves = 0
-    
+    var whoWon = ""
     var squareContent = Array(repeating: "", count: 10)
     
     let winningCombination = [
@@ -39,6 +39,19 @@ class Jeel_GameModel {
             return false
         } else if(numberOfMoves == 9) {
             return true
+        }
+        
+        for winningCombo in winningCombination{
+            let index1 = winningCombo[0]
+            let index2 = winningCombo[1]
+            let index3 = winningCombo[2]
+            
+            // Only need to check for who played last
+            if(squareContent[index1] == lastPlayed && squareContent[index2] == lastPlayed && squareContent[index3] == lastPlayed){
+                //last played won the game
+                whoWon = lastPlayed
+                return true
+            }
         }
         return false
     }

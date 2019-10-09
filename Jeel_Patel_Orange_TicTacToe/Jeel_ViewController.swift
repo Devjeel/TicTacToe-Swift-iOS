@@ -37,7 +37,10 @@ class Jeel_ViewController: UIViewController {
             let gameFinished = theGameModel.gameStatus()
             
             if(gameFinished){
-                gameStateLabel.text = "Game Over"
+                
+                let whoWon = theGameModel.whoWon
+                
+                gameStateLabel.text = whoWon + " Won!"
             } else {
                 gameStateLabel.text = theGameModel.whoseTurn + "'s Turn"
             }
