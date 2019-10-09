@@ -93,6 +93,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="X's story by Jeel" id="Ia0-2i-FJE">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="lBp-k5-iBz"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="igS-EK-hQf">
                             <connections>
                                 <segue destination="V5d-EJ-58W" kind="show" id="1wt-WX-QfV"/>
@@ -104,7 +105,7 @@
             </objects>
             <point key="canvasLocation" x="1702.8985507246377" y="134.59821428571428"/>
         </scene>
-        <!--Jeel View Controller-->
+        <!--New Game-->
         <scene sceneID="s0E-Uf-61W">
             <objects>
                 <viewController id="V5d-EJ-58W" customClass="Jeel_ViewController" customModule="Jeel_Patel_Orange_TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
@@ -181,7 +182,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="U89-Aa-vID"/>
                     </view>
-                    <navigationItem key="navigationItem" id="UbJ-t4-iUq">
+                    <navigationItem key="navigationItem" title="New Game" id="UbJ-t4-iUq">
                         <barButtonItem key="backBarButtonItem" title="Back" id="l2i-RF-9b7"/>
                     </navigationItem>
                 </viewController>
