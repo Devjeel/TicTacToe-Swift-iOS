@@ -15,6 +15,8 @@
 		E5743209233BFAFE00FDA844 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5743207233BFAFE00FDA844 /* LaunchScreen.storyboard */; };
 		E5743211233C075700FDA844 /* Jeel_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5743210233C075700FDA844 /* Jeel_TableViewController.swift */; };
 		E5743213233C092500FDA844 /* Jeel_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5743212233C092500FDA844 /* Jeel_TableViewCell.swift */; };
+		E5E401CC234E657D0056713B /* Jeel_GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E401CB234E657D0056713B /* Jeel_GameModel.swift */; };
+		E5E401CE234E684E0056713B /* Jeel_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E401CD234E684E0056713B /* Jeel_ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		E574320A233BFAFE00FDA844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5743210233C075700FDA844 /* Jeel_TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jeel_TableViewController.swift; sourceTree = "<group>"; };
 		E5743212233C092500FDA844 /* Jeel_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jeel_TableViewCell.swift; sourceTree = "<group>"; };
+		E5E401CB234E657D0056713B /* Jeel_GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jeel_GameModel.swift; sourceTree = "<group>"; };
+		E5E401CD234E684E0056713B /* Jeel_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jeel_ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				E574320A233BFAFE00FDA844 /* Info.plist */,
 				E5743210233C075700FDA844 /* Jeel_TableViewController.swift */,
 				E5743212233C092500FDA844 /* Jeel_TableViewCell.swift */,
+				E5E401CB234E657D0056713B /* Jeel_GameModel.swift */,
+				E5E401CD234E684E0056713B /* Jeel_ViewController.swift */,
 			);
 			path = Jeel_Patel_Orange_TicTacToe;
 			sourceTree = "<group>";
@@ -145,6 +151,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5743201233BFAFD00FDA844 /* ViewController.swift in Sources */,
+				E5E401CE234E684E0056713B /* Jeel_ViewController.swift in Sources */,
+				E5E401CC234E657D0056713B /* Jeel_GameModel.swift in Sources */,
 				E57431FD233BFAFD00FDA844 /* AppDelegate.swift in Sources */,
 				E57431FF233BFAFD00FDA844 /* SceneDelegate.swift in Sources */,
 				E5743211233C075700FDA844 /* Jeel_TableViewController.swift in Sources */,
