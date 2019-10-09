@@ -11,6 +11,8 @@ import Foundation
 class Jeel_GameModel {
     var whoseTurn = "X"
     
+    var numberOfMoves = 0
+    
     var squareContent = Array(repeating: "", count: 10)
     
     let winningCombination = [
@@ -18,4 +20,26 @@ class Jeel_GameModel {
         [1,4,7], [2,5,8], [3,6,9],
         [1,5,9], [3,5,7]
     ]
+    
+    func playMove(tag: Int){
+        squareContent[tag] = whoseTurn
+        
+        if(whoseTurn == "X"){
+            whoseTurn = "O"
+        } else {
+            whoseTurn = "X"
+        }
+        
+        numberOfMoves += 1
+        
+    }
+    
+    func gameStatus() -> Bool {
+        if(numberOfMoves < 5){
+            return false
+        } else if(numberOfMoves == 9) {
+            return true
+        }
+        return false
+    }
 }
