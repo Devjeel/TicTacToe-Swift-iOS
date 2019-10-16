@@ -12,6 +12,7 @@ class Jeel_ViewController: UIViewController {
     
     //MARK:- Class Variables
     var theGameModel = Jeel_GameModel()
+    var gameFinished  = false
     
     //MARK:- Outlets
     @IBOutlet weak var gameStateLabel: UILabel!
@@ -28,19 +29,24 @@ class Jeel_ViewController: UIViewController {
     @IBAction func squareTouched(_ sender: UIButton) {
         print(sender.tag)
         
-        // check if label is empty
-        if(!(sender.currentTitle == "X" || sender.currentTitle == "O")) {
+        // check if label is empty or game finished 
+        if(!(sender.currentTitle == "X" || sender.currentTitle == "O" || gameFinished)) {
             sender.setTitle(theGameModel.whoseTurn, for: .normal)
             theGameModel.playMove(tag: sender.tag)
             
             // check if game is finished
-            let gameFinished = theGameModel.gameStatus()
+            gameFinished = theGameModel.gameStatus()
             
             if(gameFinished){
                 
                 let whoWon = theGameModel.whoWon
                 
-                gameStateLabel.text = whoWon + " Won!"
+                if(whoWon == ""){
+                    gameStateLabel.text = "Match Draw !"
+                } else {
+                    gameStateLabel.text = whoWon + " Won!"
+                }
+                
             } else {
                 gameStateLabel.text = theGameModel.whoseTurn + "'s Turn"
             }

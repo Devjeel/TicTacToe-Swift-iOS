@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E55196542357A00800A7D425 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55196532357A00800A7D425 /* Constants.swift */; };
 		E57431FD233BFAFD00FDA844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57431FC233BFAFD00FDA844 /* AppDelegate.swift */; };
 		E57431FF233BFAFD00FDA844 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57431FE233BFAFD00FDA844 /* SceneDelegate.swift */; };
 		E5743201233BFAFD00FDA844 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5743200233BFAFD00FDA844 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E55196532357A00800A7D425 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E57431F9233BFAFD00FDA844 /* Jeel_Patel_Orange_TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jeel_Patel_Orange_TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57431FC233BFAFD00FDA844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E57431FE233BFAFD00FDA844 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				E5743212233C092500FDA844 /* Jeel_TableViewCell.swift */,
 				E5E401CB234E657D0056713B /* Jeel_GameModel.swift */,
 				E5E401CD234E684E0056713B /* Jeel_ViewController.swift */,
+				E55196532357A00800A7D425 /* Constants.swift */,
 			);
 			path = Jeel_Patel_Orange_TicTacToe;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				E57431FF233BFAFD00FDA844 /* SceneDelegate.swift in Sources */,
 				E5743211233C075700FDA844 /* Jeel_TableViewController.swift in Sources */,
 				E5743213233C092500FDA844 /* Jeel_TableViewCell.swift in Sources */,
+				E55196542357A00800A7D425 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
