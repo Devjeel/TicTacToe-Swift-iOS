@@ -9,7 +9,12 @@
 import UIKit
 
 class Jeel_TableViewCell: UITableViewCell {
-
+    
+    //MARK:-Outlets
+    @IBOutlet weak var winLossImage: UIImageView!
+    @IBOutlet weak var whoWonLabel: UILabel!
+    @IBOutlet weak var dateTimeLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

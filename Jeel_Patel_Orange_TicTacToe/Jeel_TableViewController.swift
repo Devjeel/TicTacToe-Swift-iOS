@@ -9,6 +9,8 @@
 import UIKit
 
 class Jeel_TableViewController: UITableViewController {
+    
+    var gameDataArray = [gameInData]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,23 @@ class Jeel_TableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
+    
+    func loadData() {
+        let numberOfGamesPlayed = UserDefaults.standard.integer(forKey: Constants.NUM_GAMES)
+        
+        for i in (0...numberOfGamesPlayed){
+            
+            let whoWon = UserDefaults.standard.string(forKey: Constants.WHO_WON + String(i + 1))!
+            
+            let dateTime = UserDefaults.standard.object(forKey: Constants.DATE_TIME + String(i + 1)) as! Date
+            
+            let orderOfMoves = UserDefaults.standard.array(forKey: Constants.ORDERS_OF_MOVES + String(i + 1)) as! [Int]
+            
+            let gameData = gameInData(whoWon: whoWon, dateTime: dateTime, orderOfMoves: orderOfMoves)
+            
+            gameDataArray.append(gameData)
+        }
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -29,7 +48,8 @@ class Jeel_TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        let numberOfGamesPlayed = UserDefaults.standard.integer(forKey: Constants.NUM_GAMES)
+        return numberOfGamesPlayed
     }
 
     
@@ -87,4 +107,11 @@ class Jeel_TableViewController: UITableViewController {
     }
     */
 
+}
+
+
+struct gameInData {
+    var whoWon : String
+    var dateTime : Date
+    var orderOfMoves : [Int]
 }
