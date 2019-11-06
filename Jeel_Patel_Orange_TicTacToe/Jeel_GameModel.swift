@@ -84,6 +84,12 @@ class Jeel_GameModel {
         
         UserDefaults.standard.set(numberOfGamesPlayed, forKey: Constants.NUM_GAMES)
         
+        if(whoWon == ""){
+            UserDefaults.standard.set("Draw!", forKey: Constants.WHO_WON + String(numberOfGamesPlayed))
+        } else {
+            UserDefaults.standard.set(whoWon, forKey: Constants.WHO_WON + String(numberOfGamesPlayed))
+        }
+        
         UserDefaults.standard.set(whoWon, forKey: Constants.WHO_WON + String(numberOfGamesPlayed))
         
         let date = Date()

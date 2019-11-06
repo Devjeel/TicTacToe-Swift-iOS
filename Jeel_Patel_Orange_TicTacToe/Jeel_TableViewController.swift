@@ -14,20 +14,31 @@ class Jeel_TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        loadData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        loadData()
+        tableView.reloadData()
+    }
 
     // MARK: - Table view data source
     
     func loadData() {
+        
+        gameDataArray = [gameInData]()
+        
         let numberOfGamesPlayed = UserDefaults.standard.integer(forKey: Constants.NUM_GAMES)
         
-        for i in (0...numberOfGamesPlayed){
+        for i in (0..<numberOfGamesPlayed).reversed() {
             
             let whoWon = UserDefaults.standard.string(forKey: Constants.WHO_WON + String(i + 1))!
             
@@ -54,10 +65,32 @@ class Jeel_TableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "jeel_TableCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "jeel_TableCell", for: indexPath) as! Jeel_TableViewCell
 
         // Configure the cell...
-
+        //For cell 'i'
+        let i = indexPath.row
+        
+        //Load gamedata
+        let gameData = gameDataArray[i]
+        
+        //Date Formatter -> date to string
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+        
+        let formattedDateTime = dateFormatter.string(from: gameData.dateTime)
+        
+        //Change labels with data
+        cell.whoWonLabel.text = gameData.whoWon + " Won!"
+        cell.dateTimeLabel.text = formattedDateTime
+        
+        if(gameData.whoWon == "X"){
+            cell.winLossImage.image = UIImage(named: "orange_win")
+        } else {
+            cell.winLossImage.image = UIImage(named: "orange_loss")
+        }
+        
         return cell
     }
     

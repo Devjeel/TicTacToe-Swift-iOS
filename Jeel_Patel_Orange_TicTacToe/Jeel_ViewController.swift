@@ -45,6 +45,7 @@ class Jeel_ViewController: UIViewController {
                     gameStateLabel.text = "Match Draw !"
                 } else {
                     gameStateLabel.text = whoWon + " Won!"
+                    
                 }
                 
             } else {
