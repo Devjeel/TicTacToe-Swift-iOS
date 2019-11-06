@@ -13,6 +13,8 @@ class Jeel_ViewController: UIViewController {
     //MARK:- Class Variables
     var theGameModel = Jeel_GameModel()
     var gameFinished  = false
+    var replayingPastGame = false
+    var pastGameData : gameInData? 
     
     //MARK:- Outlets
     @IBOutlet weak var gameStateLabel: UILabel!
@@ -22,6 +24,30 @@ class Jeel_ViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         gameStateLabel.text = theGameModel.whoseTurn + "'s Turn"
+        
+        if(replayingPastGame){
+            theGameModel.isPastGame = true
+            //show the past game
+            navigationItem.title = "Past Game"
+            //Game moves
+            let pastGameMoves  = (pastGameData?.orderOfMoves)!
+            //Delay Time
+            var delay : Double = Double(0)
+            
+            for i in pastGameMoves{
+                //Delay Time
+                delay = delay + 1.0
+                DispatchQueue.main.asyncAfter(deadline: .now() + delay,
+                    execute: {
+                        //Show moves
+                        let button = self.view.viewWithTag(i)
+                        self.squareTouched(button as! UIButton)
+                })
+                
+            }
+        } else {
+            //nothing
+        }
     }
     
     //MARK:- IBActions
@@ -30,7 +56,7 @@ class Jeel_ViewController: UIViewController {
         print(sender.tag)
         
         // check if label is empty or game finished 
-        if(!(sender.currentTitle == "X" || sender.currentTitle == "O" || gameFinished)) {
+        if(!(sender.currentTitle == "X" || sender.currentTitle == "O" || gameFinished )) {
             sender.setTitle(theGameModel.whoseTurn, for: .normal)
             theGameModel.playMove(tag: sender.tag)
             

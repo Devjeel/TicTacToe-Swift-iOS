@@ -15,6 +15,9 @@ class Jeel_TableViewCell: UITableViewCell {
     @IBOutlet weak var whoWonLabel: UILabel!
     @IBOutlet weak var dateTimeLabel: UILabel!
     
+    //MARK: Class Variables
+    var gameData : gameInData?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

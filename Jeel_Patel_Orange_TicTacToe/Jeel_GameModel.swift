@@ -15,6 +15,7 @@ class Jeel_GameModel {
     var lastPlayed = ""
     var numberOfMoves = 0
     var whoWon = ""
+    var isPastGame = false
     var squareContent = Array(repeating: "", count: 10)
     var orderOfMoves = [Int]()
     
@@ -77,18 +78,17 @@ class Jeel_GameModel {
     }
     
     func saveGame() {
+        if(isPastGame){
+            return
+        }
         //Number of games played using USERDEFAULTS storage for history
         var numberOfGamesPlayed = UserDefaults.standard.integer(forKey: Constants.NUM_GAMES)
         
         numberOfGamesPlayed += 1
         
         UserDefaults.standard.set(numberOfGamesPlayed, forKey: Constants.NUM_GAMES)
-        
-        if(whoWon == ""){
-            UserDefaults.standard.set("Draw!", forKey: Constants.WHO_WON + String(numberOfGamesPlayed))
-        } else {
+
             UserDefaults.standard.set(whoWon, forKey: Constants.WHO_WON + String(numberOfGamesPlayed))
-        }
         
         UserDefaults.standard.set(whoWon, forKey: Constants.WHO_WON + String(numberOfGamesPlayed))
         

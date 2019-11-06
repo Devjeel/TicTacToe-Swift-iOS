@@ -82,7 +82,11 @@ class Jeel_TableViewController: UITableViewController {
         let formattedDateTime = dateFormatter.string(from: gameData.dateTime)
         
         //Change labels with data
-        cell.whoWonLabel.text = gameData.whoWon + " Won!"
+        if (gameData.whoWon == ""){
+            cell.whoWonLabel.text = "Draw!"
+        } else {
+            cell.whoWonLabel.text = gameData.whoWon + " Won!"
+        }
         cell.dateTimeLabel.text = formattedDateTime
         
         if(gameData.whoWon == "X"){
@@ -90,7 +94,7 @@ class Jeel_TableViewController: UITableViewController {
         } else {
             cell.winLossImage.image = UIImage(named: "orange_loss")
         }
-        
+        cell.gameData = gameData
         return cell
     }
     
@@ -130,15 +134,28 @@ class Jeel_TableViewController: UITableViewController {
     }
     */
 
-    /*
+   
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        //CHECK New VS Previous game
+        let identifier = segue.identifier
+        
+        if(identifier == "newGame"){
+            return
+        }
+        
+        //Setup for previous Game
+        let whichCell = sender as! Jeel_TableViewCell
+        let destinationView = segue.destination as! Jeel_ViewController
+        
+        destinationView.replayingPastGame = true
+        destinationView.pastGameData = whichCell.gameData
     }
-    */
 
 }
 
